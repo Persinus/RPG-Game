@@ -1,0 +1,99 @@
+# ========== COMMON ==========
+# Chuẩn hóa xuống dòng để tránh lỗi giữa Win/Linux/Mac
+* text=auto
+
+# C# code → bật diff thông minh
+*.cs diff=csharp
+
+# JSON, XML, YAML → coi là text
+*.json text
+*.xml text
+*.yml text
+*.yaml text
+*.config text
+*.csproj text
+*.sln text
+*.props text
+*.targets text
+
+# ========== UNITY ==========
+# Unity YAML files
+[attr]unity-yaml-file -text merge=unityyamlmerge linguist-generated
+
+# Unity specific text-based assets
+*.asmdef unity-yaml-file -linguist-generated
+*.anim unity-yaml-file
+*.asset unity-yaml-file
+*.controller unity-yaml-file
+*.mat unity-yaml-file
+*.meta unity-yaml-file
+*.prefab unity-yaml-file
+*.unity unity-yaml-file
+
+# Unity binary assets → Git LFS
+[attr]lfs-file filter=lfs diff=lfs merge=lfs -text
+*.psd lfs-file
+*.png lfs-file
+*.jpg lfs-file
+*.jpeg lfs-file
+*.tga lfs-file
+*.tiff lfs-file
+*.bmp lfs-file
+*.gif lfs-file
+*.svg lfs-file
+*.webp lfs-file
+
+# Unity audio / video → Git LFS
+*.mp3 lfs-file
+*.ogg lfs-file
+*.wav lfs-file
+*.aif lfs-file
+*.aiff lfs-file
+*.mp4 lfs-file
+*.mov lfs-file
+*.avi lfs-file
+
+# 3D models → Git LFS
+*.fbx lfs-file
+*.obj lfs-file
+*.blend lfs-file
+*.glb lfs-file
+*.gltf lfs-file
+
+# Unity packages
+*.unitypackage lfs-file
+*.bundle lfs-file
+
+# ========== ASP.NET BACKEND ==========
+# Code và cấu hình ASP.NET → giữ text
+*.cs text
+*.cshtml text
+*.razor text
+*.ts text
+*.js text
+*.html text
+*.css text
+
+# Migration / SQL scripts
+*.sql text
+
+# DLL, exe → binary, không diff
+*.dll binary
+*.exe binary
+
+# Log files → ignore diff
+*.log -diff
+
+# ========== DOCUMENTS ==========
+# Docs lớn → Git LFS
+*.pdf lfs-file
+*.docx lfs-file
+*.pptx lfs-file
+*.xlsx lfs-file
+
+# ========== PACKAGING ==========
+*.zip lfs-file
+*.rar lfs-file
+*.7z lfs-file
+*.tar lfs-file
+*.gz lfs-file
