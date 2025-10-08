@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.persinus.keystoremanager": {
+      "version": "https://github.com/Persinus/persinus-keystore-manager.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "4095d435965e40c869c7be08cc4301590be545ab"
+    },
     "com.unity.2d.animation": {
       "version": "9.2.0",
       "depth": 1,

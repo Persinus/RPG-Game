@@ -78,91 +78,61 @@ ServerData/
 [Aa]ssets/InitTestScene*.unity*
 
 #############################################
-### ASP.NET Backend (MMORPGBackend)
+### Node.js / Fastify Backend (MMORPGBackend)
 #############################################
 
-# User-specific files
-*.rsuser
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
+# Node.js dependencies
+node_modules/
 
-# Build results
-[Dd]ebug/
-[Rr]elease/
-x64/
-x86/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
-MMORPGBackend/[Bb]in/
-MMORPGBackend/[Oo]bj/
-MMORPGBackend/[Ll]og/
-
-# VS cache
-.vs/
-.vscode/
-
-# MSTest test results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
-
-# NUnit
-*.VisualState.xml
-TestResult.xml
-nunit-*.xml
-
-# Rider / JetBrains
-.idea/
-*.DotSettings
-
-# Files built by Visual Studio
-*_i.c
-*_p.c
-*_h.h
-*.ilk
-*.meta
-*.obj
-*.iobj
-*.pch
-*.pdb
-*.ipdb
-*.pgc
-*.pgd
-*.rsp
-*.sbr
-*.tlh
-*.tli
-*.tmp
-*.tmp_proj
-*_wpftmp.csproj
+# Logs
+logs/
 *.log
-*.vspscc
-*.vssscc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# SQL / DB
-*.dbmdl
-*.bak
-*.bak2
-*.ldf
-*.mdf
-*.ndf
-*.sqlproj
-*.cache
-*.diff
-*.orig
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# NuGet
-*.nupkg
-*.snupkg
-*.nuspec
-*.psess
-*.vsp
-*.vspx
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
 
-# Tye
-.tye/
+# Build directories
+dist/
+build/
+.cache/
+coverage/
+.tmp/
+out/
 
-# Publish folder (backend only)
+# OS specific
+.DS_Store
+Thumbs.db
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Fastify temp files or plugins build
+MMORPGBackend/.fastify-cache/
+MMORPGBackend/.cache/
+MMORPGBackend/logs/
+MMORPGBackend/tmp/
+
+# Optional lock files (choose one system)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore deploy artifacts
+MMORPGBackend/deploy/
 MMORPGBackend/publish/
