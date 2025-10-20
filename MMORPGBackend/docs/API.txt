@@ -1,0 +1,95 @@
+MMORPG Backend - API summary
+============================
+
+Ghi chú chung
+- Player có thuộc tính gameId (id riêng, không phải _id). Guest chỉ có gameId và isGuest=true.
+- Templates class (characterTypes) được lưu tĩnh tại: src/config/characterTypes.js
+- User model lưu trạng thái hiện tại trong user.character. character default: level=0 (chưa chọn).
+- Khi chọn class (select-class) server gán hp/attack/mana/skills từ characterTypes vào user.character.
+- Các response mặc định loại bỏ password_hash.
+
+Endpoints chính
+----------------
+
+1) POST /auth/guest
+- Mô tả: Tạo guest minimal.
+- Request body: none
+- Response: { message: "Guest created", gameId: "<gid>", id: "<_id>" }
+- Lưu ý: Không trả username/email/character/characterTypes.
+
+2) POST /auth/register
+- Mô tả: Đăng ký tài khoản mới hoặc claim guest bằng gameId.
+- Request body:
+  - username, password, email  (bắt buộc khi đăng ký)
+  - gameId (tuỳ chọn, nếu có -> claim guest)
+- Response: user object (không có password_hash)
+- Claim flow: nếu gửi gameId, server tìm user.gameId và gán username/password/email.
+
+3) POST /auth/login
+- Mô tả: Đăng nhập bằng username+password hoặc gameId (guest).
+- Request body: { username?, password?, gameId? }
+- Response: { message, user } (user không có password_hash)
+
+4) POST /auth/change-password
+- Mô tả: Đổi mật khẩu.
+- Request body:
+  - newPassword (bắt buộc)
+  - username + oldPassword  (xác thực bằng mật khẩu cũ)
+  - hoặc gameId (guest/claim flow) — không cần oldPassword
+- Response: { message: "Đổi mật khẩu thành công" }
+
+5) GET /auth/users
+- Mô tả: Lấy danh sách users (admin/debug)
+- Response: array user objects (không có password_hash)
+
+6) GET /auth/users/:id
+- Mô tả: Lấy user theo _id
+- Response: user object (không có password_hash) hoặc 404
+
+7) DELETE /auth/users/:id
+- Mô tả: Xóa user theo _id
+
+Player routes
+-------------
+
+1) POST /player/init
+- Mô tả: Khởi tạo trạng thái character (backward-compatible).
+- Request body: { username }
+- Hành vi: Nếu user chưa có character, tạo object rỗng với level=0 và skills = {0,0,0}.
+- Response: { message, character }
+
+2) POST /player/select-class
+- Mô tả: Chọn class dựa theo gameId (id riêng của player).
+- Request body:
+  - gameId: string (bắt buộc)
+  - class: "archer" | "assassin" | "saber" (bắt buộc)
+  - name: string (tuỳ chọn)
+- Hành vi:
+  - Tìm user bằng gameId.
+  - Lấy template từ src/config/characterTypes.js dựa vào class.
+  - Gán user.character = { class, name, level:1, hp, attack, mana, gold:0, exp:0, skills: {1,1,1} }.
+  - Lưu và trả về full user (không có password_hash).
+- Response: { message: "Chọn class thành công", user: { ... } }
+
+Config / Templates
+------------------
+- File: src/config/characterTypes.js
+- Gồm 3 class: archer (mana cao nhất), assassin (attack cao nhất), saber (hp cao nhất).
+- Mỗi class có 3 skills; mỗi skill là array 7 level { level, mana, multiplier }.
+
+Test nhanh (curl)
+------------------
+- Tạo guest:
+  curl -X POST http://HOST:PORT/auth/guest
+- Chọn class (ví dụ archer):
+  curl -X POST http://HOST:PORT/player/select-class -H "Content-Type: application/json" -d '{"gameId":"<gid>","class":"archer","name":"Bob"}'
+- Claim guest bằng register:
+  curl -X POST http://HOST:PORT/auth/register -H "Content-Type: application/json" -d '{"gameId":"<gid>","username":"bob","password":"p","email":"b@x"}'
+
+Notes / To do
+-------------
+- Nếu cần expose characterTypes cho client (dùng để show lựa chọn trước khi chọn), tạo route GET /config/classes trả về characterTypes.
+- Đảm bảo client không hiển thị hoặc gửi username/email cho guest (guest chỉ dùng gameId).
+- Kiểm tra tất cả chỗ code cũ tham chiếu user.characterTypes và thay bằng import từ config.
+
+Hết.
