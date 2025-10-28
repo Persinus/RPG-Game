@@ -1,21 +1,33 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
-  username: { type: String, index: true, default: "" },
-  password_hash: { type: String, default: "" },
-  email: { type: String, default: "" },
-  isGuest: { type: Boolean, default: false },
+const petSchema = new mongoose.Schema({
+  name: { type: String, default: "" },
+  type: { type: String, default: "" }, // ví dụ: "dragon", "wolf"
+  level: { type: Number, default: 1 },
+  rarity: { type: String, default: "common" }, // common/rare/epic...
+  stats: {
+    hp: { type: Number, default: 0 },
+    attack: { type: Number, default: 0 },
+    mana: { type: Number, default: 0 },
+  },
   created_at: { type: Date, default: Date.now },
-  gameId: { type: String, default: "" }, // GAMEId để đăng nhập dưới dạng Guest
+});
 
-  // Không lưu characterTypes vào mỗi user. Templates nằm ở src/config/characterTypes.js
+const userSchema = new mongoose.Schema({
+  username: { type: String, index: true, unique: true, default: "" },
+  password_hash: { type: String, default: "" },
+  email: { type: String, unique: true, sparse: true, default: "" },
+  gameId: { type: String, default: "" },
 
-  // Thông tin nhân vật lưu trạng thái hiện tại (mặc định: chưa chọn)
+  // currency
+  gold: { type: Number, default: 0 },
+  diamonds: { type: Number, default: 0 }, // new currency
+
   character: {
     class: { type: String, enum: ["archer", "assassin", "saber", ""], default: "" },
     name: { type: String, default: "" },
-    level: { type: Number, default: 0 }, // 0 = chưa khởi tạo / chưa chọn class
-    hp: { type: Number },      // sẽ được gán từ template khi chọn class
+    level: { type: Number, default: 0 },
+    hp: { type: Number },
     attack: { type: Number },
     mana: { type: Number },
     gold: { type: Number, default: 0 },
@@ -27,7 +39,15 @@ const userSchema = new mongoose.Schema({
     },
   },
 
-  equipment: { type: Object, default: {} },
+  // pets owned by user
+  pets: { type: [petSchema], default: [] },
+
+  // equipment: store equipped pet id (ObjectId referencing subdoc _id)
+  equipment: {
+    petId: { type: mongoose.Schema.Types.ObjectId, default: null },
+    // ... you can keep other slots here
+  },
+
   inventory: { type: Array, default: [] },
 });
 
