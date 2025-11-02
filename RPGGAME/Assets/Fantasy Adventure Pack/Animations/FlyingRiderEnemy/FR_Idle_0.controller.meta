@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a5b79de9fa9f9d249b2c499be3ad11a8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/FlyingRiderEnemy/FR_Idle_0.controller
+  uploadId: 736370

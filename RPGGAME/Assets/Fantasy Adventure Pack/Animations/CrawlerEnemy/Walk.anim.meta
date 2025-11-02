@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 21a781668401f5448bea564bacf75f0c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/CrawlerEnemy/Walk.anim
+  uploadId: 736370

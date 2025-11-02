@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: aee6d1868044e5d40a5e61b24f3b521f
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Prefabs/Enemies/CrawlerEnemy.prefab
+  uploadId: 736370

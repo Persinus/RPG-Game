@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2d0080e9048955d468309f29769451e9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/Boss/SpikeAttack.anim
+  uploadId: 736370

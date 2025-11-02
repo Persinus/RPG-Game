@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f4479527bd8b11a42b74b3d7df967030
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/Player1/Player1.controller
+  uploadId: 736370

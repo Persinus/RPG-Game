@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9ca2c7637ab52184c975f6f474ddd905
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Prefabs/Enemies/MeleeEnemy1.prefab
+  uploadId: 736370

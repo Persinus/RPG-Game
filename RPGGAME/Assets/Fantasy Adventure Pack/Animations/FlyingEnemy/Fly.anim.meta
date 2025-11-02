@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2b91440ec42e778489bca859bc29feec
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/FlyingEnemy/Fly.anim
+  uploadId: 736370

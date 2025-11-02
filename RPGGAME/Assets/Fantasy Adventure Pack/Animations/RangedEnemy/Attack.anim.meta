@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ab9dadb0ebf11dd4b91c443b1f9f13e6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/RangedEnemy/Attack.anim
+  uploadId: 736370

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b9789b9c3ced2e34a96a3973290249b7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/Player1/Raise.anim
+  uploadId: 736370

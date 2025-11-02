@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f73bf955b211ba548bd25048d1cd081a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/Player2/IdleTurn.anim
+  uploadId: 736370

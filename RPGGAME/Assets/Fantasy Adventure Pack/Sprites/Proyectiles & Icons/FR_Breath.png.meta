@@ -1,0 +1,618 @@
+fileFormatVersion: 2
+guid: 76fb22b0ae7538c4783f2ea09a36c11a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2223111865968008973
+    second: FR_Breath_0
+  - first:
+      213: -8453106974194320535
+    second: FR_Breath_1
+  - first:
+      213: -6482464287596099127
+    second: FR_Breath_2
+  - first:
+      213: -7548846692561852540
+    second: FR_Breath_3
+  - first:
+      213: -811331446393380774
+    second: FR_Breath_4
+  - first:
+      213: -2607885270580103932
+    second: FR_Breath_5
+  - first:
+      213: -3795757217121403297
+    second: FR_Breath_6
+  - first:
+      213: 3213825363729602606
+    second: FR_Breath_7
+  - first:
+      213: 7152466772769673839
+    second: FR_Breath_8
+  - first:
+      213: -3935300116663784828
+    second: FR_Breath_9
+  - first:
+      213: 4004847128389736057
+    second: FR_Breath_10
+  - first:
+      213: -4057177470143872166
+    second: FR_Breath_11
+  - first:
+      213: 6959866161414818682
+    second: FR_Breath_12
+  - first:
+      213: 4190058369947806752
+    second: FR_Breath_13
+  - first:
+      213: -4981756737213847533
+    second: FR_Breath_14
+  - first:
+      213: -1351345027440532829
+    second: FR_Breath_15
+  - first:
+      213: -4527434871628467471
+    second: FR_Breath_16
+  - first:
+      213: -460361574817037788
+    second: FR_Breath_17
+  - first:
+      213: 2190616280048783014
+    second: FR_Breath_18
+  - first:
+      213: 977160457551034197
+    second: FR_Breath_19
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FR_Breath_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f9afaa6741ade10800000000000000
+      internalID: 2223111865968008973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 50
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b35c25ef780ba80800000000000000
+      internalID: -8453106974194320535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_2
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 50
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9cda47319a906a0800000000000000
+      internalID: -6482464287596099127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_3
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 50
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487e7f9bdeb1d3790800000000000000
+      internalID: -7548846692561852540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 50
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a506e9e19529db4f0800000000000000
+      internalID: -811331446393380774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_5
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 50
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4057910e92eeecbd0800000000000000
+      internalID: -2607885270580103932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_6
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 50
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e7adbfbe2c25bc0800000000000000
+      internalID: -3795757217121403297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e285e37042dc99c20800000000000000
+      internalID: 3213825363729602606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_8
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 25
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6298ba62aaa24360800000000000000
+      internalID: 7152466772769673839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_9
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 25
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48aa3bdd4610369c0800000000000000
+      internalID: -3935300116663784828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_10
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 25
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976d963ae33149730800000000000000
+      internalID: 4004847128389736057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 25
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a534b55369202b7c0800000000000000
+      internalID: -4057177470143872166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_12
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 25
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b446b1669669060800000000000000
+      internalID: 6959866161414818682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_13
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 25
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c24e833e3162a30800000000000000
+      internalID: 4190058369947806752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318a5f854ae3ddab0800000000000000
+      internalID: -4981756737213847533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_15
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2aa667bde0f3de0800000000000000
+      internalID: -1351345027440532829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_16
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f27edcb8f15b21c0800000000000000
+      internalID: -4527434871628467471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_17
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4228ac836977c99f0800000000000000
+      internalID: -460361574817037788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_18
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aece7b76e1a66e10800000000000000
+      internalID: 2190616280048783014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FR_Breath_19
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 0
+        width: 88
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55733e842429f8d00800000000000000
+      internalID: 977160457551034197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FR_Breath_0: 2223111865968008973
+      FR_Breath_1: -8453106974194320535
+      FR_Breath_10: 4004847128389736057
+      FR_Breath_11: -4057177470143872166
+      FR_Breath_12: 6959866161414818682
+      FR_Breath_13: 4190058369947806752
+      FR_Breath_14: -4981756737213847533
+      FR_Breath_15: -1351345027440532829
+      FR_Breath_16: -4527434871628467471
+      FR_Breath_17: -460361574817037788
+      FR_Breath_18: 2190616280048783014
+      FR_Breath_19: 977160457551034197
+      FR_Breath_2: -6482464287596099127
+      FR_Breath_3: -7548846692561852540
+      FR_Breath_4: -811331446393380774
+      FR_Breath_5: -2607885270580103932
+      FR_Breath_6: -3795757217121403297
+      FR_Breath_7: 3213825363729602606
+      FR_Breath_8: 7152466772769673839
+      FR_Breath_9: -3935300116663784828
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Sprites/Proyectiles & Icons/FR_Breath.png
+  uploadId: 736370

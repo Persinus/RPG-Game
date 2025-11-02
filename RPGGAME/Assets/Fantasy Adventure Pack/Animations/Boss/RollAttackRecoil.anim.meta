@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bc8627cc58f665d42a6f89de71f274e6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/Boss/RollAttackRecoil.anim
+  uploadId: 736370

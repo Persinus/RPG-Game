@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ef4b58573a0997d41bfd6065834c5ae2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/TrapEnemy1/TE1_Attack_0.controller
+  uploadId: 736370

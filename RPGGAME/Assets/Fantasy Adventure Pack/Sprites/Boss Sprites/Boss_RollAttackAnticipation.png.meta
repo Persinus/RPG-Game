@@ -1,0 +1,893 @@
+fileFormatVersion: 2
+guid: 0163efd6a3a25f64fbbe7d6266715446
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4666923276816446341
+    second: Boss_RollAttackAnticipation_0
+  - first:
+      213: 3571786684043054880
+    second: Boss_RollAttackAnticipation_1
+  - first:
+      213: 5560504033270213559
+    second: Boss_RollAttackAnticipation_2
+  - first:
+      213: 7123230184535123769
+    second: Boss_RollAttackAnticipation_3
+  - first:
+      213: -3307421355173555888
+    second: Boss_RollAttackAnticipation_4
+  - first:
+      213: 8540299759453282147
+    second: Boss_RollAttackAnticipation_5
+  - first:
+      213: 6650331207263961230
+    second: Boss_RollAttackAnticipation_6
+  - first:
+      213: -5338777831389733471
+    second: Boss_RollAttackAnticipation_7
+  - first:
+      213: -5532956537522650292
+    second: Boss_RollAttackAnticipation_8
+  - first:
+      213: 5813812543842795791
+    second: Boss_RollAttackAnticipation_9
+  - first:
+      213: -3568803222432529238
+    second: Boss_RollAttackAnticipation_10
+  - first:
+      213: 8381437046623871536
+    second: Boss_RollAttackAnticipation_11
+  - first:
+      213: 8491207334421498807
+    second: Boss_RollAttackAnticipation_12
+  - first:
+      213: -3620995573825708310
+    second: Boss_RollAttackAnticipation_13
+  - first:
+      213: -5010200187231634111
+    second: Boss_RollAttackAnticipation_14
+  - first:
+      213: -1183032128138749408
+    second: Boss_RollAttackAnticipation_15
+  - first:
+      213: -9166377439504777515
+    second: Boss_RollAttackAnticipation_16
+  - first:
+      213: -1300382279548237133
+    second: Boss_RollAttackAnticipation_17
+  - first:
+      213: -1708031999815664602
+    second: Boss_RollAttackAnticipation_18
+  - first:
+      213: 1931629728300336090
+    second: Boss_RollAttackAnticipation_19
+  - first:
+      213: 4624252284440202529
+    second: Boss_RollAttackAnticipation_20
+  - first:
+      213: 4183661955962334081
+    second: Boss_RollAttackAnticipation_21
+  - first:
+      213: -6627767459763883548
+    second: Boss_RollAttackAnticipation_22
+  - first:
+      213: 166601860735593707
+    second: Boss_RollAttackAnticipation_23
+  - first:
+      213: 673612408423215085
+    second: Boss_RollAttackAnticipation_24
+  - first:
+      213: -5645762302328179424
+    second: Boss_RollAttackAnticipation_25
+  - first:
+      213: -4906775812330928726
+    second: Boss_RollAttackAnticipation_26
+  - first:
+      213: 5707882718433006238
+    second: Boss_RollAttackAnticipation_27
+  - first:
+      213: 1749034382286337715
+    second: Boss_RollAttackAnticipation_28
+  - first:
+      213: 5824515516414287077
+    second: Boss_RollAttackAnticipation_29
+  - first:
+      213: 6326021963121670790
+    second: Boss_RollAttackAnticipation_30
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 396
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c8a539102cb3fb0800000000000000
+      internalID: -4666923276816446341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 396
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f4bd3a019819130800000000000000
+      internalID: 3571786684043054880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 396
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bba23b15f0ea2d40800000000000000
+      internalID: 5560504033270213559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 396
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9376e82cc1ccad260800000000000000
+      internalID: 7123230184535123769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_4
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 396
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051d65a0dcda912d0800000000000000
+      internalID: -3307421355173555888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 396
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f119df16d358670800000000000000
+      internalID: 8540299759453282147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_6
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 396
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e80c9af7ff8ba4c50800000000000000
+      internalID: 6650331207263961230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_7
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 396
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1add84139d9d8e5b0800000000000000
+      internalID: -5338777831389733471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43894f085df633b0800000000000000
+      internalID: -5532956537522650292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_9
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01c57aa4bfcea050800000000000000
+      internalID: 5813812543842795791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_10
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa4c3a5a060197ec0800000000000000
+      internalID: -3568803222432529238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_11
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032a05f4698d05470800000000000000
+      internalID: 8381437046623871536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb82621514d6d570800000000000000
+      internalID: 8491207334421498807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_13
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee5bd0e5b3afbdc0800000000000000
+      internalID: -3620995573825708310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_14
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d76729971387ab0800000000000000
+      internalID: -5010200187231634111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_15
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a5a642c86059fe0800000000000000
+      internalID: -1183032128138749408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5deb929c84c7ac080800000000000000
+      internalID: -9166377439504777515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_17
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba805bd43d14fde0800000000000000
+      internalID: -1300382279548237133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62cbcf912f9db48e0800000000000000
+      internalID: -1708031999815664602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_19
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad30de0f0078eca10800000000000000
+      internalID: 1931629728300336090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_20
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12dc8ddc3f4ac2040800000000000000
+      internalID: 4624252284440202529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_21
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b6379026a5f0a30800000000000000
+      internalID: 4183661955962334081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_22
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e171ea5c907504a0800000000000000
+      internalID: -6627767459763883548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_23
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec60187283ef4200800000000000000
+      internalID: 166601860735593707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: def6c50aae6295900800000000000000
+      internalID: 673612408423215085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_25
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025ff6b391936a1b0800000000000000
+      internalID: -5645762302328179424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_26
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa549895561a7ebb0800000000000000
+      internalID: -4906775812330928726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_27
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e925acb3719763f40800000000000000
+      internalID: 5707882718433006238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_28
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b63f100181d54810800000000000000
+      internalID: 1749034382286337715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_29
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecdf98a006d4d050800000000000000
+      internalID: 5824515516414287077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_RollAttackAnticipation_30
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68abf21757b8ac750800000000000000
+      internalID: 6326021963121670790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Boss_RollAttackAnticipation_0: -4666923276816446341
+      Boss_RollAttackAnticipation_1: 3571786684043054880
+      Boss_RollAttackAnticipation_10: -3568803222432529238
+      Boss_RollAttackAnticipation_11: 8381437046623871536
+      Boss_RollAttackAnticipation_12: 8491207334421498807
+      Boss_RollAttackAnticipation_13: -3620995573825708310
+      Boss_RollAttackAnticipation_14: -5010200187231634111
+      Boss_RollAttackAnticipation_15: -1183032128138749408
+      Boss_RollAttackAnticipation_16: -9166377439504777515
+      Boss_RollAttackAnticipation_17: -1300382279548237133
+      Boss_RollAttackAnticipation_18: -1708031999815664602
+      Boss_RollAttackAnticipation_19: 1931629728300336090
+      Boss_RollAttackAnticipation_2: 5560504033270213559
+      Boss_RollAttackAnticipation_20: 4624252284440202529
+      Boss_RollAttackAnticipation_21: 4183661955962334081
+      Boss_RollAttackAnticipation_22: -6627767459763883548
+      Boss_RollAttackAnticipation_23: 166601860735593707
+      Boss_RollAttackAnticipation_24: 673612408423215085
+      Boss_RollAttackAnticipation_25: -5645762302328179424
+      Boss_RollAttackAnticipation_26: -4906775812330928726
+      Boss_RollAttackAnticipation_27: 5707882718433006238
+      Boss_RollAttackAnticipation_28: 1749034382286337715
+      Boss_RollAttackAnticipation_29: 5824515516414287077
+      Boss_RollAttackAnticipation_3: 7123230184535123769
+      Boss_RollAttackAnticipation_30: 6326021963121670790
+      Boss_RollAttackAnticipation_4: -3307421355173555888
+      Boss_RollAttackAnticipation_5: 8540299759453282147
+      Boss_RollAttackAnticipation_6: 6650331207263961230
+      Boss_RollAttackAnticipation_7: -5338777831389733471
+      Boss_RollAttackAnticipation_8: -5532956537522650292
+      Boss_RollAttackAnticipation_9: 5813812543842795791
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Sprites/Boss Sprites/Boss_RollAttackAnticipation.png
+  uploadId: 736370

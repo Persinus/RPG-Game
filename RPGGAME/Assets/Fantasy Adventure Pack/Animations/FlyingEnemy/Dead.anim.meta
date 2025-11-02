@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4a5954a2fb6e9be4687d5a575f8d6e1b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/FlyingEnemy/Dead.anim
+  uploadId: 736370

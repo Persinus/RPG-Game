@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c12719ec488bf2d4b8b8fcb3ca1d076f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/MeleeEnemy2/Idle.anim
+  uploadId: 736370

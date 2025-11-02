@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4bc73d3979975e443b0cdbcdf84e352a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/CrawlerEnemy/Dead.anim
+  uploadId: 736370

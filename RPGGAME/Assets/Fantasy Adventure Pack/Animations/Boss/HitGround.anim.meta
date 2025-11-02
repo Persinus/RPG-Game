@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 87ab47fe73f04704e85e1bfdef631c7e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/Boss/HitGround.anim
+  uploadId: 736370

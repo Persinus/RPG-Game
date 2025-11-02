@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ce33cac1bb7267e47b2a66f43ebe41a7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/Boss/Roar.anim
+  uploadId: 736370

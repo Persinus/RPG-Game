@@ -1,0 +1,568 @@
+fileFormatVersion: 2
+guid: 62d446d8071b6434a846646f90c9a9e2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7981768890724170753
+    second: Boss_TakeOff_0
+  - first:
+      213: -2602173671352513448
+    second: Boss_TakeOff_1
+  - first:
+      213: -8952763942809355517
+    second: Boss_TakeOff_2
+  - first:
+      213: -3141727424587258642
+    second: Boss_TakeOff_3
+  - first:
+      213: -4722948019991395973
+    second: Boss_TakeOff_4
+  - first:
+      213: 7076181151678872849
+    second: Boss_TakeOff_5
+  - first:
+      213: 5371543845316041615
+    second: Boss_TakeOff_6
+  - first:
+      213: -610365303882985117
+    second: Boss_TakeOff_7
+  - first:
+      213: -7363982157361742757
+    second: Boss_TakeOff_8
+  - first:
+      213: -2305795334000040689
+    second: Boss_TakeOff_9
+  - first:
+      213: -3189493097086729772
+    second: Boss_TakeOff_10
+  - first:
+      213: 8518492034083618898
+    second: Boss_TakeOff_11
+  - first:
+      213: 8286639223943548038
+    second: Boss_TakeOff_12
+  - first:
+      213: 357349225855098465
+    second: Boss_TakeOff_13
+  - first:
+      213: -4029175475040747667
+    second: Boss_TakeOff_14
+  - first:
+      213: 8661693512491164472
+    second: Boss_TakeOff_15
+  - first:
+      213: -1609947950827694237
+    second: Boss_TakeOff_16
+  - first:
+      213: -6548379813405524857
+    second: Boss_TakeOff_17
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boss_TakeOff_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff34f1dab7f0b3190800000000000000
+      internalID: -7981768890724170753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85cc82335d833ebd0800000000000000
+      internalID: -2602173671352513448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b3ce6b0a461c380800000000000000
+      internalID: -8952763942809355517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_3
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee4af5c8d875664d0800000000000000
+      internalID: -3141727424587258642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_4
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7147cf8cc7b47eb0800000000000000
+      internalID: -4722948019991395973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_5
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d32282445a33260800000000000000
+      internalID: 7076181151678872849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_6
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b9f7beaae8b8a40800000000000000
+      internalID: 5371543845316041615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_7
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 264
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361d4de6dfb8787f0800000000000000
+      internalID: -610365303882985117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c73227e31edc990800000000000000
+      internalID: -7363982157361742757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_9
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05ac204c5b2000e0800000000000000
+      internalID: -2305795334000040689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_10
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1c5964de4acb3d0800000000000000
+      internalID: -3189493097086729772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_11
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2508c814f53c73670800000000000000
+      internalID: 8518492034083618898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c49fc387e000370800000000000000
+      internalID: 8286639223943548038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_13
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e9ad34a3f85f400800000000000000
+      internalID: 357349225855098465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_14
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ffa70c04e7518c0800000000000000
+      internalID: -4029175475040747667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_15
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 132
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8336755ab54843870800000000000000
+      internalID: 8661693512491164472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3671c0c5ed058a9e0800000000000000
+      internalID: -1609947950827694237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_TakeOff_17
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 180
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cff97214b7f15a0800000000000000
+      internalID: -6548379813405524857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Boss_TakeOff_0: -7981768890724170753
+      Boss_TakeOff_1: -2602173671352513448
+      Boss_TakeOff_10: -3189493097086729772
+      Boss_TakeOff_11: 8518492034083618898
+      Boss_TakeOff_12: 8286639223943548038
+      Boss_TakeOff_13: 357349225855098465
+      Boss_TakeOff_14: -4029175475040747667
+      Boss_TakeOff_15: 8661693512491164472
+      Boss_TakeOff_16: -1609947950827694237
+      Boss_TakeOff_17: -6548379813405524857
+      Boss_TakeOff_2: -8952763942809355517
+      Boss_TakeOff_3: -3141727424587258642
+      Boss_TakeOff_4: -4722948019991395973
+      Boss_TakeOff_5: 7076181151678872849
+      Boss_TakeOff_6: 5371543845316041615
+      Boss_TakeOff_7: -610365303882985117
+      Boss_TakeOff_8: -7363982157361742757
+      Boss_TakeOff_9: -2305795334000040689
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Sprites/Boss Sprites/Boss_TakeOff.png
+  uploadId: 736370

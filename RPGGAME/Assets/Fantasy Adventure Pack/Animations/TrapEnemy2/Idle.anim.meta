@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d9a4ef18b30b78d4c9e100f60b7e4c2f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/TrapEnemy2/Idle.anim
+  uploadId: 736370

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e2d26146bdae33545ba78f81019ac8e2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/TrapEnemy2/TentacleAttack.anim
+  uploadId: 736370

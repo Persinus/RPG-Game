@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d44921d6e3ecbae499bb6358d7739526
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Prefabs/Enemies/RangedEnemy.prefab
+  uploadId: 736370

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 646e2f7bd420ec648b9c327763d06640
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 162831
+  packageName: Metroidvania Adventure
+  packageVersion: 1.0
+  assetPath: Assets/Fantasy Adventure Pack/Animations/MeleeEnemy1/Hit.anim
+  uploadId: 736370

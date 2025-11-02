@@ -1,4 +1,0 @@
-repository "MMOGame 2025-10-27_00-27-45/MMOGame@18967607250086@cloud"
-  path "/"
-    br "/main"
-    co "/main"
