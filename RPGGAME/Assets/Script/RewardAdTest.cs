@@ -2,54 +2,62 @@ using UnityEngine;
 using UnityEngine.UI;
 using GoogleMobileAds.Api;
 using TMPro;
+using Fusion;
 
-public class RewardedGoldAd_Local : MonoBehaviour
+public class RewardedGoldAd_Local_FusionSafe : MonoBehaviour
 {
     [Header("UI (gán trong Inspector)")]
     public TextMeshProUGUI goldText;
     public Button watchAdButton;
 
+    [Header("Fusion (tự nhận nếu không gán)")]
+    [SerializeField] private NetworkRunner runner;
+
     private int gold = 0;
     private RewardedAd rewardedAd;
+    private bool isAdShowing = false;
 
 #if UNITY_ANDROID
-    private string _adUnitId = "ca-app-pub-3940256099942544/5224354917"; // Test ID Android
+    private string _adUnitId = "ca-app-pub-3940256099942544/5224354917";
 #elif UNITY_IPHONE
-    private string _adUnitId = "ca-app-pub-3940256099942544/1712485313"; // Test ID iOS
+    private string _adUnitId = "ca-app-pub-3940256099942544/1712485313";
 #else
     private string _adUnitId = "unused";
 #endif
 
+    private void Awake()
+    {
+        // 🔹 Cách khuyến nghị: lấy runner đang chạy trong scene hiện tại
+        if (runner == null)
+            runner = NetworkRunner.GetRunnerForScene(gameObject.scene);
+
+        // Nếu vẫn chưa có, log cảnh báo (tránh null)
+        if (runner == null)
+            Debug.LogWarning("[RewardedGoldAd_Local] ⚠️ Chưa tìm thấy NetworkRunner trong scene này.");
+    }
+
     private void Start()
     {
-        // Gán listener cho nút xem quảng cáo
-        if (watchAdButton)
-        {
+        if (watchAdButton != null)
             watchAdButton.onClick.AddListener(OnWatchAdButtonClicked);
-        }
         else
-        {
             Debug.LogWarning("[RewardedGoldAd_Local] ⚠️ watchAdButton chưa được gán!");
-        }
 
         gold = 0;
         UpdateGoldText();
 
-        // Khởi tạo SDK nhưng không load sẵn quảng cáo
         MobileAds.Initialize(initStatus =>
         {
-            Debug.Log("✅ Google Mobile Ads SDK initialized (no preloading).");
+            Debug.Log("✅ Google Mobile Ads SDK initialized (Fusion-safe mode).");
         });
     }
 
-    // Khi người chơi bấm nút xem quảng cáo
     private void OnWatchAdButtonClicked()
     {
         Debug.Log("🎯 Player clicked Watch Ad button — preparing ad...");
         LoadAndShowRewardedAd();
     }
 
-    // Tải và hiển thị quảng cáo khi có sẵn
     private void LoadAndShowRewardedAd()
     {
         if (rewardedAd != null)
@@ -58,7 +66,7 @@ public class RewardedGoldAd_Local : MonoBehaviour
             rewardedAd = null;
         }
 
-        AdRequest request = new AdRequest();
+        var request = new AdRequest();
         Debug.Log("🔄 Loading rewarded ad...");
 
         RewardedAd.Load(_adUnitId, request, (RewardedAd ad, LoadAdError error) =>
@@ -73,9 +81,10 @@ public class RewardedGoldAd_Local : MonoBehaviour
             rewardedAd = ad;
             RegisterEventHandlers(rewardedAd);
 
-            // Chỉ hiển thị sau khi load thành công
             if (rewardedAd.CanShowAd())
             {
+                PauseGame(); // Fusion-safe pause
+
                 rewardedAd.Show((Reward reward) =>
                 {
                     gold += 100;
@@ -90,13 +99,37 @@ public class RewardedGoldAd_Local : MonoBehaviour
     {
         ad.OnAdFullScreenContentClosed += () =>
         {
-            Debug.Log("❎ Ad closed — ready for next click.");
+            Debug.Log("❎ Ad closed — resuming game...");
+            ResumeGame();
         };
 
         ad.OnAdFullScreenContentFailed += (AdError error) =>
         {
             Debug.LogError("🚫 Failed to open ad: " + error);
+            ResumeGame();
         };
+    }
+
+    private void PauseGame()
+    {
+        isAdShowing = true;
+        Time.timeScale = 0f;
+
+        if (runner != null)
+            runner.ProvideInput = false;
+
+        Debug.Log("⏸️ Game paused for ad (Fusion-safe).");
+    }
+
+    private void ResumeGame()
+    {
+        isAdShowing = false;
+        Time.timeScale = 1f;
+
+        if (runner != null)
+            runner.ProvideInput = true;
+
+        Debug.Log("▶️ Game resumed after ad (Fusion-safe).");
     }
 
     private void UpdateGoldText()

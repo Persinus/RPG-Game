@@ -54,7 +54,6 @@
     <Compile Include="Assets\Script\RewardAdTest.cs" />
     <Compile Include="Assets\Script\PlayerSpawner.cs" />
     <Compile Include="Assets\Script\GameOnlineManager.cs" />
-    <Compile Include="Assets\Script\AddressableInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\Fusion\Plugins\NanoSockets\libnanosockets_LICENSE.txt" />
@@ -1443,6 +1442,10 @@
   <ItemGroup>
     <ProjectReference Include="Fusion.Unity.csproj" />
     <ProjectReference Include="GoogleMobileAds.Editor.csproj" />
+    <ProjectReference Include="Fusion.Addons.FSM.Editor.csproj" />
+    <ProjectReference Include="Fusion.Addons.Physics.Editor.csproj" />
+    <ProjectReference Include="Fusion.Addons.Physics.csproj" />
+    <ProjectReference Include="Fusion.Addons.FSM.csproj" />
     <ProjectReference Include="Fusion.Unity.Editor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />

@@ -1479,6 +1479,10 @@
   <ItemGroup>
     <ProjectReference Include="Fusion.Unity.csproj" />
     <ProjectReference Include="GoogleMobileAds.Editor.csproj" />
+    <ProjectReference Include="Fusion.Addons.FSM.Editor.csproj" />
+    <ProjectReference Include="Fusion.Addons.Physics.Editor.csproj" />
+    <ProjectReference Include="Fusion.Addons.Physics.csproj" />
+    <ProjectReference Include="Fusion.Addons.FSM.csproj" />
     <ProjectReference Include="Fusion.Unity.Editor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
