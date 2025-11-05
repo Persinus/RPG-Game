@@ -10,9 +10,12 @@
 
 ## 📌 Giới thiệu
 Dự án game **MMORPG 2D pixel art** phát triển bằng **Unity**, backend **ASP.NET Core + MongoDB**, hỗ trợ multiplayer qua **Photon Fusion**.  
+
 🎯 Mục tiêu: tạo bản **demo có thể chơi được** với đăng nhập, nhân vật, quái, nhiệm vụ và lưu trữ dữ liệu.
 
 ---
+
+<img width="871" height="440" alt="Ảnh chụp màn hình 2025-11-01 183928" src="https://github.com/user-attachments/assets/2316910e-f406-475d-816b-37c355e315ec" />
 
 ## ⚙️ Công nghệ chính
 - **Unity 2D** (pixel art, tilemap, animation)  
