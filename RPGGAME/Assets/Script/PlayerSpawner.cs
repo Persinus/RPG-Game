@@ -42,7 +42,7 @@ public class PlayerSpawner : MonoBehaviour, INetworkRunnerCallbacks
             Debug.Log($"Client {player} joined (no spawn authority).");
             return;
         }
-
+         
         Debug.Log($"Player {player} joined. Spawning character...");
 
         // Lấy tổng số player trong phòng để tính vị trí spawn tương đối
@@ -86,8 +86,11 @@ public class PlayerSpawner : MonoBehaviour, INetworkRunnerCallbacks
     // 📡 Các callback còn lại (tuỳ chọn)
     //========================================
 
-    public void OnInput(NetworkRunner runner, NetworkInput input) { }
-
+    public void OnInput(NetworkRunner runner, NetworkInput input)
+    {
+        
+    }
+    
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) { }
 
     public void OnConnectedToServer(NetworkRunner runner) { }
