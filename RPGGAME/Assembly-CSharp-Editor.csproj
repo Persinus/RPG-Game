@@ -48,7 +48,10 @@
     <Analyzer Include="D:\Unity\6000.0.61f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\FusionAddons\FSM\Editor\StateMachineControllerEditor.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Editor\JoystickEditor.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Editor\VariableJoystickEditor.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Editor\DynamicJoystickEditor.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Editor\FloatingJoystickEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ExternalDependencyManager\Editor\1.2.186\Google.IOSResolver.dll" />
@@ -1489,8 +1492,10 @@
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj" />
     <ProjectReference Include="Fusion.Unity.csproj" />
     <ProjectReference Include="GoogleMobileAds.Editor.csproj" />
+    <ProjectReference Include="Fusion.Addons.FSM.Editor.csproj" />
     <ProjectReference Include="Fusion.Addons.Physics.Editor.csproj" />
     <ProjectReference Include="Fusion.Addons.Physics.csproj" />
+    <ProjectReference Include="Fusion.Addons.FSM.csproj" />
     <ProjectReference Include="Fusion.Unity.Editor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
