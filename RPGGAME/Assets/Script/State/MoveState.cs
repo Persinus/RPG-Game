@@ -3,14 +3,14 @@ using Fusion.Addons.FSM;
 
 public class MoveState : StateBehaviour
 {
-    private PlayerController _player;
+    private PlayerNetWorkController _player;
     private Rigidbody2D _rb;
 
     private const float MOVE_THRESHOLD = 0.05f;
 
     protected override void OnEnterState()
     {
-        _player = GetComponent<PlayerController>();
+        _player = GetComponent<PlayerNetWorkController>();
         _rb = _player.RigidBody2D;
 
         if (_player.HasStateAuthority)

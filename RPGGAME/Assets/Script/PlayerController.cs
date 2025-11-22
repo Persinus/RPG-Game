@@ -3,9 +3,10 @@ using Fusion;
 using Fusion.Addons.FSM;
 using Unity.Cinemachine;
 using System.Collections.Generic;
+using UnityEngine.TextCore;
 
 [RequireComponent(typeof(StateMachineController))]
-public class PlayerController : NetworkBehaviour, IStateMachineOwner
+public class PlayerNetWorkController : NetworkBehaviour, IStateMachineOwner
 {
     [Header("References")]
     [SerializeField] private Rigidbody2D rigidbody2D;
@@ -18,6 +19,9 @@ public class PlayerController : NetworkBehaviour, IStateMachineOwner
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public bool _isGrounded;
+    public float jumpForce = 8f;        // lực nhảy
+
+    public bool _jumpRequested = false; // request nhảy từ input
 
     [HideInInspector] public NetworkInputData _inputData;
 
@@ -88,22 +92,34 @@ public class PlayerController : NetworkBehaviour, IStateMachineOwner
 
         // Update inspector debug
         movementX = _inputData.movement.x;
-     
+
         if (rigidbody2D) velocity = rigidbody2D.linearVelocity;
 
         // Move player
-        if (rigidbody2D != null)  
+        if (rigidbody2D != null)
             rigidbody2D.linearVelocity = new Vector2(_inputData.movement.x * moveSpeed, rigidbody2D.linearVelocity.y);
 
+        // Nếu kéo joystick lên -> request jump
+        if (_inputData.movement.y > 0.5f && _isGrounded)
+        {
+            _jumpRequested = true;
+        }
+        // -------------- HANDLE ATTACK -----------------
+        if (_inputData.Clicked(InputButtons.Attack))
+        {
+            _jumpRequested = false; // không nhảy khi attack
+            _stateMachine.TryActivateState<AttackState>();
+            return;  // dừng xử lý movement
+        }
         // FSM debug
         if (_stateMachine != null && _stateMachine.ActiveState != null)
         {
             currentStateName = _stateMachine.ActiveState.GetType().Name;
             if (_lastState != currentStateName)
                 _lastState = currentStateName;
-            
+
         }
-       
+
 
     }
 
@@ -121,22 +137,45 @@ public class PlayerController : NetworkBehaviour, IStateMachineOwner
     {
         _stateMachine = new StateMachine<StateBehaviour>("PlayerFSM",
             GetComponent<IdleState>(),
-            GetComponent<MoveState>()
+            GetComponent<MoveState>(),
+            GetComponent<JumpUpState>(),
+            GetComponent<JumpDownState>(),
+            GetComponent<AttackState>()
+
         );
         stateMachines.Add(_stateMachine);
     }
-    
-    public void SetFacingDirection(float x)
-{
-    if (x == 0) return;
 
-    Vector3 scale = transform.localScale;
-    scale.x = Mathf.Sign(x) * Mathf.Abs(scale.x); // giữ nguyên size, chỉ đổi dấu
-    transform.localScale = scale;
-}
+    public void SetFacingDirection(float x)
+    {
+        if (x == 0) return;
+
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Sign(x) * Mathf.Abs(scale.x); // giữ nguyên size, chỉ đổi dấu
+        transform.localScale = scale;
+    }
     private void OnDestroy()
     {
         if (playerUIInstance) Destroy(playerUIInstance);
         if (camInstance) Destroy(camInstance);
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Kiểm tra nếu chạm đất
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            _isGrounded = true;
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        // Kiểm tra nếu rời khỏi đất
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            _isGrounded = false;
+        }
+    }
+
+
 }
