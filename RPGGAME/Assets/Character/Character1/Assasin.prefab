@@ -19,6 +19,9 @@ GameObject:
   - component: {fileID: 4759410477306233561}
   - component: {fileID: 5629733826360213009}
   - component: {fileID: 1855038602821261488}
+  - component: {fileID: 2570579867052300116}
+  - component: {fileID: 8227190036105373830}
+  - component: {fileID: -2912422136772664771}
   m_Layer: 0
   m_Name: Assasin
   m_TagString: Untagged
@@ -182,6 +185,9 @@ MonoBehaviour:
   - {fileID: 4759410477306233561}
   - {fileID: 5629733826360213009}
   - {fileID: 1855038602821261488}
+  - {fileID: 2570579867052300116}
+  - {fileID: 8227190036105373830}
+  - {fileID: -2912422136772664771}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &-1238894522695359801
 MonoBehaviour:
@@ -224,6 +230,8 @@ MonoBehaviour:
   cameraPrefab: {fileID: 5939785799394874324, guid: 12c8dc794b144214d9dde8defaecfcf0, type: 3}
   moveSpeed: 2
   _isGrounded: 0
+  jumpForce: 5
+  _jumpRequested: 0
   currentStateName: 
   movementX: 0
   movementY: 0
@@ -291,3 +299,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _priority: 0
   _checkPriorityOnExit: 1
+--- !u!114 &2570579867052300116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8497526559976152160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb84044d1a1f02649ac92568ac758e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _priority: 0
+  _checkPriorityOnExit: 1
+--- !u!114 &8227190036105373830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8497526559976152160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd9ce570cec6854c958c9433cfc3c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _priority: 0
+  _checkPriorityOnExit: 1
+--- !u!114 &-2912422136772664771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8497526559976152160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68df38a17abd3a4bae815b803714806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _priority: 0
+  _checkPriorityOnExit: 1
+  attackDuration: 1
