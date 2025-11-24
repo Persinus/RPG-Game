@@ -95,9 +95,21 @@ public class PlayerNetWorkController : NetworkBehaviour, IStateMachineOwner
 
         if (rigidbody2D) velocity = rigidbody2D.linearVelocity;
 
+        // Update facing direction based on horizontal input (allow mid-air turning)
+        if (Mathf.Abs(_inputData.movement.x) > 0.05f)
+            SetFacingDirection(_inputData.movement.x);
+
         // Move player
+        // Preserve Y velocity (gravity). If FSM is active it should control movement;
+        // otherwise apply horizontal movement here as a fallback.
         if (rigidbody2D != null)
-            rigidbody2D.linearVelocity = new Vector2(_inputData.movement.x * moveSpeed, rigidbody2D.linearVelocity.y);
+        {
+            if (_stateMachine == null || _stateMachine.ActiveState == null)
+            {
+                float currentY = rigidbody2D.linearVelocity.y;
+                rigidbody2D.linearVelocity = new Vector2(_inputData.movement.x * moveSpeed, currentY);
+            }
+        }
 
         // Nếu kéo joystick lên -> request jump
         if (_inputData.movement.y > 0.5f && _isGrounded)
@@ -109,6 +121,43 @@ public class PlayerNetWorkController : NetworkBehaviour, IStateMachineOwner
         {
             _jumpRequested = false; // không nhảy khi attack
             _stateMachine.TryActivateState<AttackState>();
+            return;  // dừng xử lý movement
+        }
+        // -------------- HANDLE ATTACK 1 -----------------
+        if (_inputData.Clicked(InputButtons.Skill1))
+        {
+            _jumpRequested = false; // không nhảy khi attack
+            _stateMachine.TryActivateState<Skill1State>();
+            return;  // dừng xử lý movement
+        }
+
+        // -------------- HANDLE ATTACK 2 -----------------
+        if (_inputData.Clicked(InputButtons.Skill2))
+        {
+            _jumpRequested = false; // không nhảy khi attack
+            _stateMachine.TryActivateState<Skill2State>();
+            return;  // dừng xử lý movement
+        }
+
+        // -------------- HANDLE ATTACK 3 -----------------
+        if (_inputData.Clicked(InputButtons.Skill3))
+        {
+            _jumpRequested = false; // không nhảy khi attack
+            _stateMachine.TryActivateState<Skill3State>();
+            return;  // dừng xử lý movement
+        }
+        // -------------- HANDLE DASH -----------------
+        if (_inputData.Clicked(InputButtons.Dash))
+        {
+            _jumpRequested = false; // không nhảy khi dash
+            _stateMachine.TryActivateState<DashState>();
+            return;  // dừng xử lý movement
+        }
+        // -------------- HANDLE ROLL -----------------
+        if (_inputData.Clicked(InputButtons.Roll))
+        {
+            _jumpRequested = false; // không nhảy khi roll
+            _stateMachine.TryActivateState<RollState>();
             return;  // dừng xử lý movement
         }
         // FSM debug
@@ -140,7 +189,12 @@ public class PlayerNetWorkController : NetworkBehaviour, IStateMachineOwner
             GetComponent<MoveState>(),
             GetComponent<JumpUpState>(),
             GetComponent<JumpDownState>(),
-            GetComponent<AttackState>()
+            GetComponent<AttackState>(),
+            GetComponent<Skill1State>(),
+            GetComponent<Skill2State>(),
+            GetComponent<Skill3State>(),
+            GetComponent<DashState>(),
+            GetComponent<RollState>()
 
         );
         stateMachines.Add(_stateMachine);

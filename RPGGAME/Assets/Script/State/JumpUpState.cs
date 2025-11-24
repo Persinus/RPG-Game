@@ -29,11 +29,21 @@ public class JumpUpState : StateBehaviour
 
     protected override void OnFixedUpdate()
     {
+        // 👉 Cho flip hướng khi đang nhảy
+        if (Mathf.Abs(_player._inputData.movement.x) > 0.05f)
+        {
+            _player.SetFacingDirection(_player._inputData.movement.x);
+        }
         // Khi bắt đầu rơi → chuyển JumpDown
         if (rb.linearVelocity.y < 0)
         {
             Machine.TryActivateState<JumpDownState>();
             return;
         }
+    }
+    protected override void OnExitState()
+    {
+        // Reset jump request khi rời state
+        _player._jumpRequested = false;
     }
 }

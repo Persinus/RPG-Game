@@ -25,5 +25,10 @@ public class JumpDownState : StateBehaviour
         {
             Machine.TryActivateState<IdleState>();
         }
+        // 👉 Flip hướng khi rơi
+        if (Mathf.Abs(_player._inputData.movement.x) > 0.05f)
+        {
+            _player.SetFacingDirection(_player._inputData.movement.x);
+        }
     }
 }

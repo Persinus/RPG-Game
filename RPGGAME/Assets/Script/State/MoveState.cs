@@ -27,8 +27,13 @@ public class MoveState : StateBehaviour
         // Lấy Y hiện tại (gravity tự xử lý)
         float currentY = rb.linearVelocity.y;
 
-        // Chỉ điều khiển X
-        float targetX = _player._inputData.movement.x * _player.moveSpeed;
+        // Tính vận tốc ngang từ input (dùng ngưỡng để tránh rung nhỏ)
+        float inputX = _player._inputData.movement.x;
+        float targetX = Mathf.Abs(inputX) > MOVE_THRESHOLD ? inputX * _player.moveSpeed : 0f;
+
+        // Cho phép xoay trái/phải ngay cả khi đang nhảy (mid-air)
+        if (Mathf.Abs(inputX) > MOVE_THRESHOLD)
+            _player.SetFacingDirection(inputX);
 
         rb.linearVelocity = new Vector2(targetX, currentY);
 

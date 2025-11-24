@@ -42,13 +42,17 @@ public class PlayerSpawner : MonoBehaviour, INetworkRunnerCallbacks
             Debug.Log($"Client {player} joined (no spawn authority).");
             return;
         }
-         
+
         Debug.Log($"Player {player} joined. Spawning character...");
 
         // Lấy tổng số player trong phòng để tính vị trí spawn tương đối
         int totalPlayers = Mathf.Max(1, runner.Config.Simulation.PlayerCount);
         int index = player.RawEncoded % totalPlayers;
 
+        // Lấy thứ tự player join (bắt đầu từ 1)
+        int playerIndex = spawnedCharacters.Count + 1;
+        string playerName = $"Player {playerIndex}";
+        
         // 🔹 Tạo vị trí spawn xung quanh gốc toạ độ (0, 0)
         float radius = 4f;
         float angle = (index / (float)totalPlayers) * Mathf.PI * 2f;
@@ -64,6 +68,14 @@ public class PlayerSpawner : MonoBehaviour, INetworkRunnerCallbacks
         // Ghi lại vào danh sách quản lý
         spawnedCharacters[player] = playerObject;
 
+
+        //---------------------------------------------------
+        // THÊM DÒNG QUAN TRỌNG: GÁN TÊN QUA RPC
+        //---------------------------------------------------
+        var controller = playerObject.GetComponent<Player_Name_NetWorkController>();
+        controller.RPC_SetPlayerName(playerName);
+
+        Debug.Log($"✅ Spawned Player {playerName} | PlayerRef {player}");
         Debug.Log($"✅ Spawned PlayerRef {player} at {spawnPosition} - InputAuthority: {playerObject.InputAuthority}");
     }
 
@@ -88,9 +100,9 @@ public class PlayerSpawner : MonoBehaviour, INetworkRunnerCallbacks
 
     public void OnInput(NetworkRunner runner, NetworkInput input)
     {
-        
+
     }
-    
+
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason) { }
 
     public void OnConnectedToServer(NetworkRunner runner) { }

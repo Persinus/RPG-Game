@@ -10,7 +10,13 @@ public class MobileInputCanvas : MonoBehaviour, INetworkRunnerCallbacks
 
     [Header("Action Buttons")]
     public Button attackButton;
-    public Button jumpButton;
+    public Button skill1Button;
+    public Button skill2Button;
+    public Button skill3Button;
+
+   [Header ("Skill")]
+    public Button DashButton;
+    public Button RollButton;  
 
     [HideInInspector] public NetworkRunner runner;
 
@@ -21,7 +27,11 @@ public class MobileInputCanvas : MonoBehaviour, INetworkRunnerCallbacks
         DontDestroyOnLoad(gameObject);
 
         attackButton?.onClick.AddListener(() => currentInput.Click(InputButtons.Attack));
-        jumpButton?.onClick.AddListener(() => currentInput.Click(InputButtons.Jump));
+        skill1Button?.onClick.AddListener(() => currentInput.Click(InputButtons.Skill1));
+        skill2Button?.onClick.AddListener(() => currentInput.Click(InputButtons.Skill2));
+        skill3Button?.onClick.AddListener(() => currentInput.Click(InputButtons.Skill3));
+        DashButton?.onClick.AddListener(() => currentInput.Click(InputButtons.Dash));
+        RollButton?.onClick.AddListener(() => currentInput.Click(InputButtons.Roll));
     }
 
     private void Update()
@@ -47,9 +57,9 @@ public class MobileInputCanvas : MonoBehaviour, INetworkRunnerCallbacks
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) { }
     public void OnPlayerLeft(NetworkRunner runner, PlayerRef player) { }
     public void OnConnectedToServer(NetworkRunner runner) { }
-    public void OnDisconnectedFromServer(NetworkRunner runner, Fusion.Sockets.NetDisconnectReason reason) { }
+    public void OnDisconnectedFromServer(NetworkRunner runner, NetDisconnectReason reason) { }
     public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) { }
-    public void OnConnectFailed(NetworkRunner runner, Fusion.Sockets.NetAddress remoteAddress, Fusion.Sockets.NetConnectFailedReason reason) { }
+    public void OnConnectFailed(NetworkRunner runner,NetAddress remoteAddress, NetConnectFailedReason reason) { }
     public void OnInputMissing(NetworkRunner runner, PlayerRef player, NetworkInput input) { }
     public void OnSessionListUpdated(NetworkRunner runner, System.Collections.Generic.List<SessionInfo> sessionList) { }
     public void OnCustomAuthenticationResponse(NetworkRunner runner, System.Collections.Generic.Dictionary<string, object> data) { }

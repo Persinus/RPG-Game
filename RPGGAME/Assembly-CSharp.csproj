@@ -48,7 +48,10 @@
     <Analyzer Include="D:\Unity\6000.0.61f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\State\RollState.cs" />
+    <Compile Include="Assets\Script\State\Skill1State.cs" />
     <Compile Include="Assets\Script\NetworkManager.cs" />
+    <Compile Include="Assets\Script\Player_Name_NetWorkController.cs" />
     <Compile Include="Assets\Script\NetworkInputData.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Script\State\AttackState.cs" />
@@ -64,9 +67,12 @@
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Script\State\DashState.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
+    <Compile Include="Assets\Script\State\Skill2State.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
+    <Compile Include="Assets\Script\State\Skill3State.cs" />
     <Compile Include="Assets\Script\State\MoveState.cs" />
   </ItemGroup>
   <ItemGroup>
