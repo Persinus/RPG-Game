@@ -3,53 +3,59 @@ using Fusion.Addons.FSM;
 
 public class RollState : StateBehaviour
 {
-    private PlayerNetWorkController _player;
-    private Rigidbody2D rb;
+    [SerializeField] private string rollAnimationName = "Roll";
 
-    [Header("Roll Settings")]
-    public float rollDistance = 5f;
-    public float rollDuration = 0.3f;
-    private float rollTimer;
-    private Vector2 rollDirection;
+    private PlayerMotor _motor;
 
+    // =========================
+    // STATE ENTER
+    // =========================
     protected override void OnEnterState()
     {
-        _player = GetComponent<PlayerNetWorkController>();
-        rb = _player.RigidBody2D;
+        BindMotor();
+        if (_motor == null || !_motor.HasStateAuthority)
+            return;
 
-        if (_player.HasStateAuthority)
-        {
-            // Animation roll
-            _player.RPC_SetAnimation("Roll", false);
+        // 🚀 gọi logic roll chuẩn trong PlayerMotor
+        _motor.StartRoll();
 
-            // Xác định hướng roll dựa vào facing
-            rollDirection = new Vector2(Mathf.Sign(_player.transform.localScale.x), 0);
-
-            // Reset timer
-            rollTimer = 0f;
-        }
+        // 🎬 animation
+        _motor.Rpc_PlayAnimation(rollAnimationName);
     }
 
+    // =========================
+    // FIXED UPDATE
+    // =========================
     protected override void OnFixedUpdate()
     {
-        if (!_player.HasStateAuthority) return;
+        if (_motor == null || !_motor.HasStateAuthority)
+            return;
 
-        // Di chuyển theo hướng roll
-        rb.linearVelocity = new Vector2(rollDirection.x * rollDistance / rollDuration, rb.linearVelocity.y);
-
-        // Tăng timer
-        rollTimer += Runner.DeltaTime;
-
-        // Kết thúc roll sau rollDuration
-        if (rollTimer >= rollDuration)
+        // ⏹ roll kết thúc → quyết định state tiếp theo
+        if (!_motor.IsRolling)
         {
-            Machine.TryActivateState<IdleState>();
+            if (_motor.NetIsMoving)
+                Machine.TryActivateState<MoveState>();
+            else
+                Machine.TryActivateState<IdleState>();
         }
     }
 
+    // =========================
+    // STATE EXIT
+    // =========================
     protected override void OnExitState()
     {
-        // Reset velocity sau khi roll
-        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        // ❗ không reset IsRolling ở đây
+        // PlayerMotor.UpdateRoll() tự xử lý
+    }
+
+    // =========================
+    // HELPER
+    // =========================
+    private void BindMotor()
+    {
+        if (_motor == null)
+            _motor = GetComponentInParent<PlayerMotor>();
     }
 }

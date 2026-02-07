@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd7fb288b0b06c4bbfd7ac200bd26cf, type: 3}
+  m_Name: New Skill UI Set
+  m_EditorClassIdentifier: 
+  attack: {fileID: 4490171876178007617, guid: 1190141a34392684a8a436c98b37dd70, type: 3}
+  skill1: {fileID: 21300000, guid: f2d16a197d13f2648b3bc490130114bd, type: 3}
+  skill2: {fileID: 21300000, guid: 2afeaf9491fe3db41838072568515426, type: 3}
+  skill3: {fileID: 21300000, guid: 53a8db04c313a1c4cb2e1c77d2c46dc2, type: 3}
+  roll: {fileID: 21300000, guid: dc11f118fab42d94b94fd29833c0fe04, type: 3}

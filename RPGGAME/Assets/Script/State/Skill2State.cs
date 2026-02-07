@@ -3,27 +3,48 @@ using Fusion.Addons.FSM;
 
 public class Skill2State : StateBehaviour
 {
-    private PlayerNetWorkController _player;
+ private PlayerMotor _motor;
 
-    [SerializeField] private float attackDuration = 1f; // Thời gian animation Attack3
+    [Header("Skill 1")]
+    [SerializeField] private float attackDuration ;
+    [SerializeField] private string skill1AnimationName ;
 
+    // =========================
     protected override void OnEnterState()
     {
-        _player = GetComponent<PlayerNetWorkController>();
+        _motor = GetComponent<PlayerMotor>();
+        if (_motor == null || !_motor.HasStateAuthority)
+            return;
 
-        if (_player.HasStateAuthority)
-        {
-            // Gọi animation Attack2
-            _player.RPC_SetAnimation("Attack3", false);
-        }
+        // Khóa di chuyển khi đánh
+        _motor.IsMoving = false;
+
+        // Bật animation
+        _motor.Rpc_PlayAnimation(skill1AnimationName);
     }
 
+    // =========================
     protected override void OnFixedUpdate()
     {
-        // Khi animation đã chạy xong → về Idle
-        if (Machine.StateTime > attackDuration)
+        if (_motor == null || !_motor.HasStateAuthority)
+            return;
+
+        if (Machine.StateTime >= attackDuration)
         {
             Machine.TryActivateState<IdleState>();
         }
+    }
+
+    // =========================
+    protected override void OnExitState()
+    {
+        if (_motor == null || !_motor.HasStateAuthority)
+            return;
+
+        // Tắt animation
+        _motor.Rpc_PlayAnimation(skill1AnimationName);
+
+        // Mở lại movement
+        _motor.IsMoving = true;
     }
 }

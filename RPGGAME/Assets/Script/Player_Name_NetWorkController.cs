@@ -11,6 +11,7 @@ public class Player_Name_NetWorkController : NetworkBehaviour
     [SerializeField] private Transform nameHolder; // parent chứa TextMeshPro, giữ scale ổn định
 
     [Networked] public string PlayerName { get; set; }
+    
 
     public override void Render()
     {

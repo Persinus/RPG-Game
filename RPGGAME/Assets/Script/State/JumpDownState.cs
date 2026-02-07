@@ -3,32 +3,29 @@ using Fusion.Addons.FSM;
 
 public class JumpDownState : StateBehaviour
 {
-    private PlayerNetWorkController _player;
-    private Rigidbody2D rb;
+    [SerializeField] private string jumpDownAnimationName = "JumpDown";
+    private PlayerMotor motor;
 
     protected override void OnEnterState()
     {
-        _player = GetComponent<PlayerNetWorkController>();
-        rb = _player.RigidBody2D;
+        motor ??= GetComponentInParent<PlayerMotor>();
+        if (!motor || !motor.HasStateAuthority) return;
 
-        if (_player.HasStateAuthority)
-        {
-            // Animation rơi
-            _player.RPC_SetAnimation("Jump_Down", false);
-        }
+        motor.Rpc_PlayAnimation(jumpDownAnimationName);
     }
 
     protected override void OnFixedUpdate()
     {
-        // Khi chạm đất → về Idle
-        if (_player._isGrounded)
-        {
+        if (!motor || !motor.HasStateAuthority) return;
+
+        float x = motor.InputData.movement.x;
+        if (Mathf.Abs(x) > 0.05f)
+            motor.SetFacingDirection(x);
+
+        if (motor.IsGrounded)
             Machine.TryActivateState<IdleState>();
-        }
-        // 👉 Flip hướng khi rơi
-        if (Mathf.Abs(_player._inputData.movement.x) > 0.05f)
-        {
-            _player.SetFacingDirection(_player._inputData.movement.x);
-        }
     }
+
+    protected override void OnExitState() { }
 }
+

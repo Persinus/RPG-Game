@@ -3,47 +3,32 @@ using Fusion.Addons.FSM;
 
 public class MoveState : StateBehaviour
 {
-    private PlayerNetWorkController _player;
-    private Rigidbody2D _rb;
-
-    private const float MOVE_THRESHOLD = 0.05f;
+    [SerializeField] private string moveAnimationName = "run";
+    private PlayerMotor motor;
 
     protected override void OnEnterState()
     {
-        _player = GetComponent<PlayerNetWorkController>();
-        _rb = _player.RigidBody2D;
+        motor ??= GetComponentInParent<PlayerMotor>();
+        if (motor == null) return;
 
-        if (_player.HasStateAuthority)
-            _player.RPC_SetAnimation("Run", true);
+        if (motor.HasStateAuthority)
+            motor.Rpc_PlayAnimation(moveAnimationName);
     }
 
     protected override void OnFixedUpdate()
     {
-        if (!_player.HasStateAuthority || !GetInput(out _player._inputData))
-            return;
+        if (motor == null) return;
 
-        var rb = _player.RigidBody2D;
-
-        // Lấy Y hiện tại (gravity tự xử lý)
-        float currentY = rb.linearVelocity.y;
-
-        // Tính vận tốc ngang từ input (dùng ngưỡng để tránh rung nhỏ)
-        float inputX = _player._inputData.movement.x;
-        float targetX = Mathf.Abs(inputX) > MOVE_THRESHOLD ? inputX * _player.moveSpeed : 0f;
-
-        // Cho phép xoay trái/phải ngay cả khi đang nhảy (mid-air)
-        if (Mathf.Abs(inputX) > MOVE_THRESHOLD)
-            _player.SetFacingDirection(inputX);
-
-        rb.linearVelocity = new Vector2(targetX, currentY);
-
-          // ⭐ Flip hướng bằng hàm trong PlayerController
-        _player.SetFacingDirection(_player._inputData.movement.x);
-
-        // Chuyển về trạng thái Idle nếu không có input di chuyển
-        if (Mathf.Abs(_player._inputData.movement.x) < MOVE_THRESHOLD)
+        // ❗ FSM chỉ đọc biến NETWORKED
+        if (!motor.NetIsMoving)
         {
             Machine.TryActivateState<IdleState>();
         }
+    }
+
+    protected override void OnExitState()
+    {
+        if (motor && motor.HasStateAuthority)
+            motor.Rpc_PlayAnimation(moveAnimationName);
     }
 }

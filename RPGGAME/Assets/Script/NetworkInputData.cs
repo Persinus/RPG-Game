@@ -12,18 +12,34 @@ public enum InputButtons : ushort
     Skill1 = 1 << 4,
     Skill2 = 1 << 5,
     Skill3 = 1 << 6,
-    HealHP = 1 << 7,
-    HealMP = 1 << 8,
+    Switch  = 1 << 7,
 }
 
 public struct NetworkInputData : INetworkInput
 {
-    public InputButtons buttons;        // Giữ trạng thái nút
-    public InputButtons clickedButtons; // Nhấn 1 lần
-    public Vector2 movement;            // Joystick
+    public InputButtons buttons;
+    public InputButtons clickedButtons;
+    public Vector2 movement;
 
-    public void Click(InputButtons button) => clickedButtons |= button;
-    public void Reset() => clickedButtons = 0;
-    public bool Has(InputButtons button) => (buttons & button) != 0;
-    public bool Clicked(InputButtons button) => (clickedButtons & button) != 0;
+    public void Click(InputButtons button)
+    {
+        clickedButtons |= button;
+        buttons |= button;
+    }
+
+    public void Reset()
+    {
+        clickedButtons = 0;
+    }
+
+    public bool Has(InputButtons button) =>
+        (buttons & button) != 0;
+
+    public bool Clicked(InputButtons button) =>
+        (clickedButtons & button) != 0;
+
+    public bool IsPressed(InputButtons btn)
+    {
+        return (buttons & btn) != 0;
+    }
 }

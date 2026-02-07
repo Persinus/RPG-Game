@@ -3,7 +3,7 @@
     "TypeId": "NetworkProjectConfig",
     "PeerMode": 0,
     "LagCompensation": {
-        "Enabled": false,
+        "Enabled": true,
         "HitboxBufferLengthInMs": 200,
         "HitboxDefaultCapacity": 512,
         "CachedStaticCollidersSize": 64
@@ -37,7 +37,7 @@
     },
     "HostMigration": {
         "EnableAutoUpdate": true,
-        "UpdateDelay": 10
+        "UpdateDelay": 30
     },
     "EncryptionConfig": {
         "EnableEncryption": false
@@ -71,6 +71,6 @@
     ],
     "UseSerializableDictionary": true,
     "NullChecksForNetworkedProperties": true,
-    "CheckRpcAttributeUsage": false,
-    "CheckNetworkedPropertiesBeingEmpty": false
+    "CheckRpcAttributeUsage": true,
+    "CheckNetworkedPropertiesBeingEmpty": true
 }

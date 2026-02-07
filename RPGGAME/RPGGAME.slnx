@@ -4,7 +4,6 @@
   <Project Path="Fusion.Addons.Physics.csproj" />
   <Project Path="Fusion.Addons.FSM.Editor.csproj" />
   <Project Path="Fusion.Unity.csproj" />
-  <Project Path="GoogleMobileAds.Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor-firstpass.csproj" />
   <Project Path="Fusion.Addons.Physics.Editor.csproj" />

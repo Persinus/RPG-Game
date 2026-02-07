@@ -3,27 +3,42 @@ using Fusion.Addons.FSM;
 
 public class AttackState : StateBehaviour
 {
-    private PlayerNetWorkController _player;
+    [SerializeField] private string attackAnimationName = "Attack";
 
-    [SerializeField] private float attackDuration = 1f; // Thời gian animation Attack1
+    private PlayerMotor _motor;
 
     protected override void OnEnterState()
     {
-        _player = GetComponent<PlayerNetWorkController>();
+        BindMotor();
+        if (_motor == null || !_motor.HasStateAuthority)
+            return;
 
-        if (_player.HasStateAuthority)
-        {
-            // Gọi animation Attack1
-            _player.RPC_SetAnimation("Attack1", false);
-        }
+        _motor.StartAttack();
+        _motor.Rpc_PlayAnimation(attackAnimationName);
     }
 
     protected override void OnFixedUpdate()
     {
-        // Khi animation đã chạy xong → về Idle
-        if (Machine.StateTime > attackDuration)
+        if (_motor == null || !_motor.HasStateAuthority)
+            return;
+
+        if (!_motor.IsAttacking)
         {
-            Machine.TryActivateState<IdleState>();
+            if (_motor.NetIsMoving)
+                Machine.TryActivateState<MoveState>();
+            else
+                Machine.TryActivateState<IdleState>();
         }
+    }
+
+    protected override void OnExitState()
+    {
+        // không play animation ở đây
+    }
+
+    private void BindMotor()
+    {
+        if (_motor == null)
+            _motor = GetComponentInParent<PlayerMotor>();
     }
 }

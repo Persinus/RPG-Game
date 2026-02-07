@@ -64,7 +64,7 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
         // Nếu session tồn tại => join client, không thì tạo host
         bool sessionExists = sessionList.Any(s => s.Name == sessionName);
 
-        // Delay nhỏ để tránh race khi nhiều instance join đồng thời
+        // Delay nhỏ tránh race condition
         await Task.Delay(delayBeforeJoinMs);
 
         var scene = SceneRef.FromIndex(SceneManager.GetActiveScene().buildIndex);
@@ -74,17 +74,36 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
             GameMode = sessionExists ? GameMode.Client : GameMode.Host,
             SessionName = sessionName,
             Scene = scene,
-            SceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>()
+            SceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>(),
         };
 
         var result = await _runner.StartGame(args);
 
-        if (result.Ok)
-            Debug.Log($"✅ {(_runner.GameMode == GameMode.Host ? "Host" : "Client")} started successfully!");
-        else
+        if (!result.Ok)
+        {
             Debug.LogError($"❌ Failed to start NetworkRunner: {result.ShutdownReason}");
-    }
+            return;
+        }
 
+        Debug.Log($"✅ {(_runner.GameMode == GameMode.Host ? "Host" : "Client")} started successfully!");
+
+        // =====================================================
+        // 🔥 REGISTER MOBILE INPUT (CỰC KỲ QUAN TRỌNG)
+        // =====================================================
+        var inputCanvas = FindObjectOfType<MobileInputCanvas>();
+
+        if (inputCanvas == null)
+        {
+            Debug.LogError("❌ MobileInputCanvas NOT FOUND in scene");
+            return;
+        }
+
+        inputCanvas.Register(_runner);
+        Debug.Log("🎮 MobileInputCanvas registered to NetworkRunner");
+
+        // =====================================================
+        
+    }
     // ============================================================
     // 🔧 Fusion Callbacks
     // ============================================================
@@ -107,6 +126,10 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason)
     {
         Debug.Log($"🛑 NetworkRunner shut down: {shutdownReason}");
+
+        if (shutdownReason == ShutdownReason.HostMigration)
+            return; // ⛔ ĐỪNG cleanup lúc migration
+
         CleanupRunner();
     }
 
@@ -126,7 +149,48 @@ public class NetworkManager : MonoBehaviour, INetworkRunnerCallbacks
     public void OnConnectRequest(NetworkRunner runner, NetworkRunnerCallbackArgs.ConnectRequest request, byte[] token) { }
     public void OnUserSimulationMessage(NetworkRunner runner, SimulationMessagePtr message) { }
     public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data) { }
-    public void OnHostMigration(NetworkRunner runner, HostMigrationToken hostMigrationToken) { }
+    public async void OnHostMigration(NetworkRunner runner, HostMigrationToken token)
+    {
+        Debug.Log("🔥 Host Migration triggered");
+
+        runner.RemoveCallbacks(this);
+        Destroy(runner);
+
+        _runner = gameObject.AddComponent<NetworkRunner>();
+        _runner.ProvideInput = true;
+        _runner.AddCallbacks(this);
+
+        var sceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>();
+
+        var result = await _runner.StartGame(new StartGameArgs
+        {
+            GameMode = GameMode.Host,
+            HostMigrationToken = token,
+            HostMigrationResume = HostMigrationResume,
+            SceneManager = sceneManager
+        });
+
+        Debug.Log(result.Ok ? "✅ Migration OK" : "❌ Migration FAIL");
+    }
+    private void HostMigrationResume(NetworkRunner runner)
+    {
+        Debug.Log("♻️ Restoring game state on new Host...");
+
+        foreach (var oldNO in runner.GetResumeSnapshotNetworkObjects())
+        {
+            runner.Spawn(
+                oldNO,
+                onBeforeSpawned: (r, newNO) =>
+                {
+                    // Copy toàn bộ Networked state
+                    newNO.CopyStateFrom(oldNO);
+                }
+            );
+        }
+
+        Debug.Log("✅ Game state restored");
+    }
+
     public void OnSceneLoadDone(NetworkRunner runner) { }
     public void OnSceneLoadStart(NetworkRunner runner) { }
     public void OnObjectExitAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player) { }

@@ -3,30 +3,87 @@ using Fusion.Addons.FSM;
 
 public class IdleState : StateBehaviour
 {
-    private PlayerNetWorkController _player;
+    [SerializeField] private string idleAnimationName = "idle";
+
+    private PlayerMotor _motor;
+
+    // =========================
+    // 🔹 STATE ENTER
+    // =========================
     protected override void OnEnterState()
     {
-        _player = GetComponent<PlayerNetWorkController>();
-        if (_player.HasStateAuthority)
-        {
-            _player.RPC_SetAnimation("Idle", true); // Đồng bộ hoạt ảnh đứng yên cho tất cả client
-        }
+        BindMotor();
+        if (_motor == null) return;
+
+        if (_motor.HasStateAuthority)
+            _motor.Rpc_PlayAnimation(idleAnimationName);
     }
+
+    // =========================
+    // 🔹 FIXED UPDATE
+    // =========================
     protected override void OnFixedUpdate()
     {
-       // 1. nếu có hướng → Move
-        if (_player.HasMovementInput())
+        if (_motor == null) return;
+
+        // ❗ FSM CHỈ ĐỌC BIẾN NETWORKED
+        if (_motor.NetIsMoving)
         {
             Machine.TryActivateState<MoveState>();
             return;
         }
 
-        // 2. nếu request Jump → JumpUp
-        if (_player._jumpRequested && _player._isGrounded)
+        if (_motor.JumpRequested && _motor.HasStateAuthority)
         {
+            _motor.JumpRequested = false;
             Machine.TryActivateState<JumpUpState>();
             return;
         }
-    
+
+        if (_motor.RollRequested && _motor.HasStateAuthority)
+        {
+            Machine.TryActivateState<RollState>();
+            return;
+        }
+        if (_motor.AttackRequested && _motor.HasStateAuthority)
+        {
+            _motor.AttackRequested = false;
+            Machine.TryActivateState<AttackState>();
+            return;
+        }
+        if (_motor.SkillRequested != SkillType.None && _motor.HasStateAuthority)
+        {
+            switch (_motor.SkillRequested)
+            {
+                case SkillType.Skill1:
+                    Machine.TryActivateState<Skill1State>();
+                    break;
+                case SkillType.Skill2:
+                    Machine.TryActivateState<Skill2State>();
+                    break;
+                case SkillType.Skill3:
+                    Machine.TryActivateState<Skill3State>();
+                    break;
+            }
+            return;
+        }
+    }
+
+    // =========================
+    // 🔹 EXIT
+    // =========================
+    protected override void OnExitState()
+    {
+        if (_motor && _motor.HasStateAuthority)
+            _motor.Rpc_PlayAnimation(idleAnimationName);
+    }
+
+    // =========================
+    // 🔹 HELPER
+    // =========================
+    private void BindMotor()
+    {
+        if (_motor == null)
+            _motor = GetComponentInParent<PlayerMotor>();
     }
 }
